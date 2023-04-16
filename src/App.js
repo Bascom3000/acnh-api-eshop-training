@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { Routes, Route} from 'react-router-dom'
+import FossilList from './pages/FossilList/FossilList';
+import HousewareList from './pages/HousewareList/HousewareList';
+import ArtList from './pages/ArtList/ArtList';
+import Navbar from './components/Navbar/Navbar';
+import Filtres from './components/Filtres/Filtres';
+
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    
+
+    <Navbar />
+    <Filtres />
+
+    <Routes>
+      
+      <Route path='/fossils' element={<FossilList />}/> 
+      <Route path='/houseware' element={<HousewareList />}/>
+      <Route path='/art' element={<ArtList />}/>
+    </Routes>
+
+
+    
+
+    
+    
+    </>
   );
 }
+
 
 export default App;

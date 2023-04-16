@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+
+
+.filterContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.filters {
+    margin: 2%;
+    width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fossil, .houseware, .art {
+    border: 3px solid black;
+    margin-bottom: 5px;
+    background-color: #cc9696;
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+}
+.art {
+    height: 600px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.fossil-container, .houseware-container, .art-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    
+
 }
 
-.App-link {
-  color: #61dafb;
+.fossilList-container, .housewareList-container, .artList-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btnAddToCart {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btnAddToCart:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.linkBtn {
+    border: none;
+    border-radius: 10px;
+    padding: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #cc9696;
+    margin-right: 2%;
+}
+
+.linkBtn a:link {
+    text-decoration: none;
+}
+
+.tagObject {
+    font-style: italic;
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: left;
+}
+
+.museumPhrase, .museumDesc{
+    background-color: #ffffff93;
+    border-radius: 3%;
+    text-align: center;
+    
 }
