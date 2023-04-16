@@ -2,10 +2,10 @@ import React, { createContext, useState } from 'react';
 
 
 
-const Cart = createContext();
+const ShopContext = createContext(null);
 
  
-const ShopContext = ({children}) => {
+const ShopContextProvider = (props) => {
 
     const [cartItems, setCartItems] = useState([]);
 
@@ -19,10 +19,14 @@ const ShopContext = ({children}) => {
 
     const contextValue = { cartItems, addToCart, removeToCart}
 
-
-
+    console.log(cartItems)
+    
     return <ShopContext.Provider value={contextValue}>
         {props.children}
         </ShopContext.Provider>;
 };
 
+export {
+    ShopContextProvider,
+    ShopContext
+}
